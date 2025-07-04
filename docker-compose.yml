@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no diretório /app do contêiner para live-reload.
+      # O banco de dados SQLite (escola.db) será criado na raiz do projeto no host.
+      - .:/app
+
